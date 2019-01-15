@@ -1,11 +1,8 @@
-# checkpoints-electrum
+# checkpoints-electrum-grs
 
-This tool is written to generate the checkpoints.json file which is used in Electrum for Bitcoin <br>
-and other altcoins with an electrum client.
+This tool is written to generate the checkpoints.json file which is used in Electrum-GRS for Groestlcoin.
 
-A checkpoints.json file can be found in electrum clients. For Bitcoin: https://github.com/spesmilo/electrum/blob/a8e6eaa247a7a21cba1d23bf72ae9799cbc0cd73/electrum/checkpoints.json
-
-![alt text](https://github.com/romanornr/checkpoints-electrum/blob/master/Screenshot.png?raw=true)
+A checkpoints.json file can be found in electrum-grs clients.
 
 ##### Minimum Recommended Specifications
 
@@ -19,11 +16,11 @@ A checkpoints.json file can be found in electrum clients. For Bitcoin: https://g
 #### setup
 ``cd ~/go/src/github.com/``
 
-``https://github.com/romanornr/checkpoints-electrum.git``
+``git clone https://github.com/groestlcoin/checkpoints-electrum-grs.git``
 
-``cd checkpoints-electrum``
+``cd checkpoints-electrum-grs``
 
-``dep ensure`` 
+``dep ensure``
 
 
 dep is a dependency management tool for Go. It requires Go 1.9 or newer to compile.
@@ -31,7 +28,7 @@ https://github.com/golang/dep
 
 ### config.yml
 
-change the host, port, username & password so it matches your RPC credentials. 
+change the host, port, username & password so it matches your RPC credentials.
 
 ### Running the app
 
@@ -43,7 +40,7 @@ Or you can build the binary with the following command
 
 ``go build main.go``
 
-This will produce a binary called "main" wich you can rename and for example upload 
+This will produce a binary called "main" wich you can rename and for example upload
 on the server with scp as example. With the compiled binary, your linux
 server/vps does not need the dependency's. The server/VPS that will run the binary
 does not need to have Golang installed at all.
